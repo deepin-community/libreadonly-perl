@@ -1,0 +1,26 @@
+Source: libreadonly-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: gregor herrmann <gregoa@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               libmodule-build-tiny-perl
+Build-Depends-Indep: perl
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libreadonly-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libreadonly-perl.git
+Homepage: https://metacpan.org/release/Readonly
+Rules-Requires-Root: no
+
+Package: libreadonly-perl
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends},
+         ${perl:Depends}
+Provides: libreadonly-xs-perl
+Description: facility for creating read-only scalars, arrays and hashes
+ Readonly is a facility for creating non-modifiable variables.
+ This is useful for configuration files, headers, etc.
+ It can also be useful as a development and debugging tool, for catching
+ updates to variables that should not be changed.
